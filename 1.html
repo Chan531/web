@@ -4,6 +4,9 @@
     <title>web1 - html</title>
     <meta charset="utf-8">
     <style>
+    body{
+      margin:0;
+    }
       #active {
         color:red;
       }
@@ -17,15 +20,48 @@
       h1{
         font-size:45px;
         text-align: center;
+        border-bottom:1px solid gray;
+        margin:0;
+        padding:20px;
+      }
+      ol
+      {
+        border-right:1px solid gray;
+        width:120px;
+        margin:0;
+        padding : 20px;
       }
       h2{
         text-align: center;
+      }
+      #grid ol{
+        padding-left:33px;
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #article{
+        padding-left:40px;
+      }
+      @media(max-width:600px){
+        #grid{
+          display: block;
+        }
+        ol
+        {
+          border-right:none;
+        }
+        h1{
+          border-bottom:none;
+        }
       }
     </style>
   </head>
 
   <body>
     <h1><a href="index.html">web</a></h1>
+    <div id="grid">
     <ol>
       <li><a href="1.html" class="saw">html</a></li>
       <li><a href="2.html" class="saw" id="active">css</a></li>
@@ -39,6 +75,7 @@
       <li><a href="3.html"><font color="red">javascript</font></a></li>
     </ol>
     -->
+    <div id="article">
     <h2>물 만난 물고기</h2>
 
     <p>우리가 노래하듯이<br>
@@ -63,5 +100,7 @@
     우리가 말하듯이
     우리가 헤엄치듯이 살길
     LIVE LIKE THE WAY WE SING
+    </div>
+  </div>
   </body>
 </html>
